@@ -1,12 +1,13 @@
 package com.carrito.carrito.domain.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-
+import lombok.Getter;
+import lombok.Setter;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Entity
 public class Carrito {
     @Id
@@ -17,7 +18,7 @@ public class Carrito {
     private Long usuarioId;
 
     @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CarritoProducto> productos;
+    private List<CarritoProducto> productos;  // ✅ Asegurar que existe la propiedad "productos"
 
     @Column(nullable = false)
     private BigDecimal total;

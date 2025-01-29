@@ -1,11 +1,12 @@
 package com.carrito.carrito.domain.dto;
 
-import lombok.Data;
-
+import lombok.Getter;
+import lombok.Setter;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 public class CarritoDTO {
     private Long id;
     private List<CarritoProductoDTO> productos;
