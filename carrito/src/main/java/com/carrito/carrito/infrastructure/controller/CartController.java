@@ -1,13 +1,9 @@
 package com.carrito.carrito.infrastructure.controller;
-
 import com.carrito.carrito.application.usecase.*;
 import com.carrito.carrito.domain.dto.CarritoDTO;
-import com.carrito.carrito.domain.model.Carrito;
-import com.carrito.carrito.infrastructure.mapper.CartMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 @RequestMapping("/cart")
 @RequiredArgsConstructor
@@ -17,7 +13,6 @@ public class CartController {
     private final RemoveProductUseCase removeProductUseCase;
     private final ViewCartUseCase viewCartUseCase;
     private final ApplyCouponUseCase applyCouponUseCase;
-    private final CartMapper cartMapper;
 
     @PostMapping("/{carritoId}/add-product")
     public ResponseEntity<String> addProduct(@PathVariable Long carritoId, @RequestParam Long productoId, @RequestParam int cantidad) {
@@ -52,20 +47,9 @@ public class CartController {
     @GetMapping("/{carritoId}")
     public ResponseEntity<CarritoDTO> viewCart(@PathVariable Long carritoId) {
         try {
-            return ResponseEntity.ok(viewCartUseCase.viewCart(carritoId)); // ✅ Devuelve directamente el DTO
+            return ResponseEntity.ok(viewCartUseCase.viewCart(carritoId));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(null);
-        }
-    }
-
-
-    @PostMapping("/{carritoId}/apply-coupon")
-    public ResponseEntity<String> applyCoupon(@PathVariable Long carritoId, @RequestParam String couponCode) {
-        try {
-            applyCouponUseCase.applyCoupon(carritoId, couponCode);
-            return ResponseEntity.ok("Cupón aplicado exitosamente.");
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error: " + e.getMessage());
         }
     }
 }
