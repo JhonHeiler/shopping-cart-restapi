@@ -18,7 +18,7 @@ public class Carrito {
     private Long usuarioId;
 
     @OneToMany(mappedBy = "carrito", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CarritoProducto> productos;  // ✅ Asegurar que existe la propiedad "productos"
+    private List<CarritoProducto> productos;
 
     @Column(nullable = false)
     private BigDecimal total;

@@ -10,10 +10,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ViewCartUseCase {
     private final CartService cartService;
-    private final CartMapper cartMapper;
 
     public CarritoDTO viewCart(Long carritoId) {
         var carrito = cartService.getCartWithDiscount(carritoId);
-        return cartMapper.toDto(carrito);
+        return CartMapper.toDto(carrito);
     }
 }
