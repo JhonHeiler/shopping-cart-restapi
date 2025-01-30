@@ -1,6 +1,6 @@
 package com.carrito.carrito.infrastructure.mapper;
 
-import com.carrito.carrito.domain.dto.ProductoDTO;
+import com.carrito.carrito.domain.repository.ProductoDTO;
 import com.carrito.carrito.domain.model.Producto;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;

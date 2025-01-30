@@ -2,11 +2,11 @@ version: '3.8'
 services:
   postgres:
     image: postgres:13
-    container_name: postgres_carrito
+    container_name: shoppingcart
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: carrito
+      POSTGRES_DB: shoppingcart
     ports:
       - "5432:5432"
     volumes:
