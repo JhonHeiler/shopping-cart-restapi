@@ -163,15 +163,8 @@ CREATE TABLE IF NOT EXISTS cart_items (
 
 ---
 
-## 🔥 Endpoints Principales
+![image](https://github.com/user-attachments/assets/c93b2cfc-f307-44c0-a321-9c6f72d6f4fa)
 
-| Método  | Endpoint                 | Descripción |
-|---------|--------------------------|-------------|
-| `POST`  | `/cart/add`               | Agregar un producto al carrito |
-| `PUT`   | `/cart/update`            | Actualizar cantidad de un producto |
-| `DELETE`| `/cart/remove`            | Eliminar un producto del carrito |
-| `GET`   | `/cart/view`              | Ver el contenido del carrito |
-| `POST`  | `/cart/apply-coupon`      | Aplicar un cupón de descuento |
 
 ---
 
