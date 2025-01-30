@@ -2,11 +2,13 @@ package com.carrito.carrito.controller;
 
 import com.carrito.carrito.domain.model.Cart;
 import com.carrito.carrito.usecase.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/cart")
+@Tag(name = "Carrito de Compras", description = "Operaciones del carrito de compras")
 public class CartController {
 
     private final AddProductToCartUseCase addProductToCartUseCase;

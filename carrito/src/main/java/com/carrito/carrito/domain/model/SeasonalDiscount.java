@@ -1,15 +1,16 @@
 package com.carrito.carrito.domain.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class SeasonalDiscount {
     private Long seasonalDiscountId;
     private Long productId;
     private int startMonth;
     private int endMonth;
     private double discountPercentage;
-
 }

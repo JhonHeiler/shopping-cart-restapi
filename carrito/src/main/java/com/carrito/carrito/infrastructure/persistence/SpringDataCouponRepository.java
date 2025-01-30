@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface SpringDataCouponRepository extends JpaRepository<CouponEntity, Long> {
 
     CouponEntity findByCode(String code);
+    boolean existsByCode(String code);
 }
