@@ -4,6 +4,8 @@
 Esta API RESTful, desarrollada con **Java Spring Boot**, permite gestionar un carrito de compras, incluyendo la adición de productos, actualización de cantidades, eliminación de productos, aplicación de descuentos y persistencia en **PostgreSQL**. También se proporciona un entorno **Dockerizado** para facilitar su ejecución.
 
 ---
+![image](https://github.com/user-attachments/assets/602716be-bf6b-46bf-ad33-236a146b2f12)
+
 
 ## 💻 Tecnologías Utilizadas
 
