@@ -1,7 +1,7 @@
-package com.carrito.carrito.controller;
+package com.carrito.carrito.infrastructure.controller;
 
 import com.carrito.carrito.domain.model.Cart;
-import com.carrito.carrito.usecase.*;
+import com.carrito.carrito.application.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

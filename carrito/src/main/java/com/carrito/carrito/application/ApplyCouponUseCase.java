@@ -1,4 +1,4 @@
-package com.carrito.carrito.usecase;
+package com.carrito.carrito.application;
 
 import com.carrito.carrito.domain.model.Cart;
 import com.carrito.carrito.domain.model.Coupon;

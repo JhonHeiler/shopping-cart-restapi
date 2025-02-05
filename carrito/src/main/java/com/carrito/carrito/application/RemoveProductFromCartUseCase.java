@@ -1,23 +1,28 @@
-package com.carrito.carrito.usecase;
+package com.carrito.carrito.application;
 
 import com.carrito.carrito.domain.model.Cart;
 import com.carrito.carrito.domain.repository.CartRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ViewCartUseCase {
+public class RemoveProductFromCartUseCase {
 
     private final CartRepository cartRepository;
 
-    public ViewCartUseCase(CartRepository cartRepository) {
+    public RemoveProductFromCartUseCase(CartRepository cartRepository) {
         this.cartRepository = cartRepository;
     }
 
-    public Cart execute(Long userId) {
+    public Cart execute(Long userId, Long productId) {
         Cart cart = cartRepository.findActiveCartByUser(userId);
         if (cart == null) {
             throw new RuntimeException("No existe un carrito activo para este usuario");
         }
-        return cart;
+
+        // Eliminar producto
+        cart.removeItem(productId);
+
+        // Guardar
+        return cartRepository.save(cart);
     }
 }

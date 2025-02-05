@@ -2,7 +2,8 @@ package com.carrito.carrito.controller;
 
 
 import com.carrito.carrito.domain.model.Cart;
-import com.carrito.carrito.usecase.*;
+import com.carrito.carrito.application.*;
+import com.carrito.carrito.infrastructure.controller.CartController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
